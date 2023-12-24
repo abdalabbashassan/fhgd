@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #1A1A1A;
+            position: relative;
+            color: white;
+            font-size: 18px;
+            user-select: none;
+        }
+
+        iframe {
+            width: 100vw;
+            height: 100vh;
+            background-color: #1A1A1A; /* للون الخلفية التحت */
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .controls-container-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 211px;
+            background-color: #1A1A1A; /* للون خلفية شريط الأدوات الأول */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            z-index: 9999;
+        }
+
+        .controls-container-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 210px;
+            background-color: #1A1A1A; /* للون خلفية شريط الأدوات الثاني */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            z-index: 9999;
+        }
+
+        /* تحديث النمط ليشمل الصورة */
+        .logo {
+            position: absolute;
+            top: 210px;
+            left: 10px;
+            padding: 5px;
+            z-index: 10000;
+            transition: top 0.3s ease;
+        }
+
+        .logo img {
+            width: 33px; /* قم بتعيين العرض سويتاً */
+            height: 33px; /* قم بتعيين الارتفاع سويتاً */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="controls-container-top">
+        <!-- لا تحذف هذا القسم تحدث مشكلة -->
+    </div>
+
+    <!-- إضافة رابط صورة جديدة هنا -->
+    <div class="logo" id="logo">
+        <img src="https://i.postimg.cc/GhtcY2JC/1.png" alt="Logo Image">
+    </div>
+
+    <div class="controls-container-bottom">
+        <!-- لا تحذف هذا القسم تحدث مشكلة -->
+    </div>
+
+    <script>
+        // قم بترك السكريبت كما هو
+        const logo = document.getElementById('logo');
+        logo.addEventListener('click', function () {
+            this.classList.toggle('up');
+            this.classList.toggle('down');
+        });
+    </script>
+
+    <!-- إضافة رابط فيديو جديد هنا -->
+    <iframe src="https://www.youtube.com/embed/IHPY7ZfX8kQ?autoplay=1&mute=0" frameborder="0" allowfullscreen></iframe>
+
+</body>
+
+</html>
